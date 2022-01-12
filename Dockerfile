@@ -1,6 +1,6 @@
 FROM mwendler/wget AS builder
-RUN wget --no-check-certificate -O jmeter-plugins-manager-1.3.jar http://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-manager/1.3/jmeter-plugins-manager-1.3.jar
-RUN wget --no-check-certificate -O jpgc-functions-2.1.zip https://jmeter-plugins.org/files/packages/jpgc-functions-2.1.zip && \
+RUN wget -q --no-check-certificate -O jmeter-plugins-manager-1.3.jar http://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-manager/1.3/jmeter-plugins-manager-1.3.jar
+RUN wget -q --no-check-certificate -O jpgc-functions-2.1.zip https://jmeter-plugins.org/files/packages/jpgc-functions-2.1.zip && \
 	unzip jpgc-functions-2.1.zip
 
 FROM justb4/jmeter:5.1.1
