@@ -3,10 +3,10 @@ services:
   jmeter:
     build: ./
     # image: justb4/jmeter:5.1.1
-    image: registry.home.local/dcagatay/jmeter:latest
+    image: registry.example.local/dcagatay/jmeter:latest
     command: "-LDEBUG -n -t /test/test.jmx -l /test.jtl -j /test/jmeter.log -e -o /report"
     environment:
-      TARGET_HOST: "app.home.local"
+      TARGET_HOST: "httpbin.org"
       TARGET_BASE_PATH: "/"
     volumes:
       - ./report:/report
